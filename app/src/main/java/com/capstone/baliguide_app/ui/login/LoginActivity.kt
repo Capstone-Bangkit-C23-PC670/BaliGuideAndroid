@@ -8,6 +8,7 @@ import android.text.TextWatcher
 import android.view.View
 import com.capstone.baliguide_app.R
 import com.capstone.baliguide_app.databinding.ActivityLoginBinding
+import com.capstone.baliguide_app.ui.homepage.HomepageActivity
 import com.capstone.baliguide_app.ui.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -36,6 +37,12 @@ class LoginActivity : AppCompatActivity() {
                 // Do nothing.
             }
         })
+
+        binding.loginButton.setOnClickListener{
+            val intent = Intent(this@LoginActivity, HomepageActivity::class.java)
+            finish()
+            startActivity(intent)
+        }
 
         binding.registerClickable.setOnClickListener {
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)

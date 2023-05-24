@@ -10,11 +10,31 @@
     <string name="text_name">Name : </string>
     <string name="text_password">Password : </string>
     <string name="register">Register</string>
-    <string name="text_welcome">Welcome to BaliGuide,</string>
+    <string name="text_welcome">Welcome to BaliGuide...</string>
+    <string name="text_welcome2">Enjoy Your Stay Here !</string>
     <string name="text_welcome_login">Please Sign In Before Continue...</string>
     <string name="text_welcome_register">Please Fill The Input Below...</string>
     <string name="no_account">Don\'t have an Account?</string>
     <string name="have_account">Already have an Account?</string>
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_homepage">HomepageActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Homepage</string>
+    <string name="menu_logout">Logout</string>
+
+    <string name="menu_cafe">Cafes</string>
+    <string name="menu_souvenirs">Souvenirs</string>
+    <string name="menu_hotel">Hotels</string>
+    <string name="menu_culinary">Culinary</string>
+    <string name="menu_tourist">Tourist Spots</string>
+
+
+    <string name="menu_menus">Menus</string>
 
 </resources>

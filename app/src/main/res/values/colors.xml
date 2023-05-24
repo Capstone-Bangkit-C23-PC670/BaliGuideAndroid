@@ -11,4 +11,9 @@
     <color name="orange_700">#FB7902</color>
     <color name="link">#0000EE</color>
     <color name="error">#B71C1C</color>
+    <color name="cafes">#FEAB5E</color>
+    <color name="souvenirs">#FF9595</color>
+    <color name="hotels">#FF8AEC</color>
+    <color name="culinary">#81ADFF</color>
+    <color name="tourist">#6DFF73</color>
 </resources>
