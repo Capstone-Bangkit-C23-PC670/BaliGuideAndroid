@@ -1,4 +1,20 @@
 <resources>
     <string name="app_name">Baliguide-app</string>
     <string name="login">Login</string>
+    <string name="password_minimum">Minimum Password is 8 Character!</string>
+    <string name="email_validation">Enter a valid email address!</string>
+    <string name="hint_email">Insert your e-mail...</string>
+    <string name="hint_password">Insert your password...</string>
+    <string name="hint_name">Insert your name...</string>
+    <string name="text_email">E-mail : </string>
+    <string name="text_name">Name : </string>
+    <string name="text_password">Password : </string>
+    <string name="register">Register</string>
+    <string name="text_welcome">Welcome to BaliGuide,</string>
+    <string name="text_welcome_login">Please Sign In Before Continue...</string>
+    <string name="text_welcome_register">Please Fill The Input Below...</string>
+    <string name="no_account">Don\'t have an Account?</string>
+    <string name="have_account">Already have an Account?</string>
+    <string name="title_activity_register">RegisterActivity</string>
+
 </resources>
