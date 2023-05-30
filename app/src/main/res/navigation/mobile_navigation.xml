@@ -10,4 +10,10 @@
         android:name="com.capstone.baliguide_app.ui.homepage.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
+
+    <activity
+        android:id="@+id/nav_cafes"
+        android:name="com.capstone.baliguide_app.ui.homepage.HomeActivity"
+        android:label="@string/menu_cafe"
+        tools:layout="@layout/activity_home"/>
 </navigation>

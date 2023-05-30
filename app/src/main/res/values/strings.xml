@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Baliguide-app</string>
     <string name="login">Login</string>
+    <string name="back">Back</string>
     <string name="password_minimum">Minimum Password is 8 Character!</string>
     <string name="email_validation">Enter a valid email address!</string>
     <string name="hint_email">Insert your e-mail...</string>

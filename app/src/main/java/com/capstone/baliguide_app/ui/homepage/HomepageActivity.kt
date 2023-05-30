@@ -1,7 +1,11 @@
 package com.capstone.baliguide_app.ui.homepage
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -13,6 +17,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.baliguide_app.databinding.ActivityHomepageBinding
 import com.capstone.baliguide_app.R
+import com.capstone.baliguide_app.ui.boarding.MainActivity
 
 class HomepageActivity : AppCompatActivity() {
 
@@ -39,11 +44,26 @@ class HomepageActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        binding.appBarHomepage.toolbar.setOnMenuItemClickListener{menuItem ->
+            when (menuItem.itemId) {
+                R.id.action_logout -> {
+                    finish()
+                    val moveIntent = Intent(this@HomepageActivity, MainActivity::class.java)
+                    startActivity(moveIntent)
+                    true
+                }
+                else -> {
+                    true
+                }
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.homepage, menu)
+        val inflater = menuInflater
+        inflater.inflate(R.menu.homepage, menu)
         return true
     }
 
