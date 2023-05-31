@@ -9,7 +9,7 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
 import com.capstone.baliguide_app.R
 
-class CustomNameText : AppCompatEditText {
+class CustomInputText: AppCompatEditText  {
     private lateinit var textBackground: Drawable
 
     constructor(context: Context) : super(context) {

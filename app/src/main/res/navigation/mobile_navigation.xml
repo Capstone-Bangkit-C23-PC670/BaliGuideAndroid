@@ -13,7 +13,31 @@
 
     <activity
         android:id="@+id/nav_cafes"
-        android:name="com.capstone.baliguide_app.ui.homepage.HomeActivity"
+        android:name="com.capstone.baliguide_app.ui.cafe.CafeActivity"
         android:label="@string/menu_cafe"
-        tools:layout="@layout/activity_home"/>
+        tools:layout="@layout/activity_cafe"/>
+
+    <activity
+        android:id="@+id/nav_souvenirs"
+        android:name="com.capstone.baliguide_app.ui.souvenir.SouvenirActivity"
+        android:label="@string/menu_souvenirs"
+        tools:layout="@layout/activity_souvenir"/>
+
+    <activity
+        android:id="@+id/nav_hotels"
+        android:name="com.capstone.baliguide_app.ui.hotel.HotelActivity"
+        android:label="@string/menu_hotel"
+        tools:layout="@layout/activity_hotel"/>
+
+    <activity
+        android:id="@+id/nav_culinary"
+        android:name="com.capstone.baliguide_app.ui.culinary.CulinaryActivity"
+        android:label="@string/menu_culinary"
+        tools:layout="@layout/activity_culinary"/>
+
+    <activity
+        android:id="@+id/nav_tourist"
+        android:name="com.capstone.baliguide_app.ui.tourism.TourismActivity"
+        android:label="@string/menu_tourist"
+        tools:layout="@layout/activity_tourism"/>
 </navigation>

@@ -7,6 +7,7 @@ import com.capstone.baliguide_app.R
 import com.capstone.baliguide_app.context.SuperApplication
 import com.capstone.baliguide_app.databinding.ActivityMainBinding
 import com.capstone.baliguide_app.ui.login.LoginActivity
+import com.capstone.baliguide_app.ui.register.RegisterActivity
 
 class MainActivity : AppCompatActivity() {
     
@@ -20,6 +21,14 @@ class MainActivity : AppCompatActivity() {
             finish()
             overridePendingTransition(0, 0)
             val intent = Intent(this@MainActivity, LoginActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(0, 0)
+        }
+
+        binding.buttonRegister.setOnClickListener{
+            finish()
+            overridePendingTransition(0, 0)
+            val intent = Intent(this@MainActivity, RegisterActivity::class.java)
             startActivity(intent)
             overridePendingTransition(0, 0)
         }

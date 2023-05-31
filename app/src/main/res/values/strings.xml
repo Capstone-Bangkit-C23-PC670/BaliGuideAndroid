@@ -38,4 +38,16 @@
 
     <string name="menu_menus">Menus</string>
 
+    <string name="title_feature">Please Select These Options.</string>
+    <string name="budget_text">Budget : </string>
+    <string name="budget_hint">Your Budget...</string>
+    <string name="location_text">Location : </string>
+    <string name="location_hint">Location...</string>
+    <string name="facilities_text">Facilities : </string>
+    <string name="facilities_hint">Facilities...</string>
+    <string name="ratings_text">Ratings : </string>
+    <string name="ratings_hint">Ratings...</string>
+
+    <string name="button_guides">Guide Me!</string>
+
 </resources>
