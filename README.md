@@ -1,5 +1,7 @@
 ## BaliGuide Mobile Development Documentation
+
 This is the repository for the android of <i>BaliGuide</i> Project
+
 ---
 ## Installation :
 1. clone this repository to your computer using this command :
