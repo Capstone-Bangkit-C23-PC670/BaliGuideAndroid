@@ -49,5 +49,8 @@
     <string name="ratings_hint">Ratings...</string>
 
     <string name="button_guides">Guide Me!</string>
+    <string name="titleBali">BaliGuide</string>
+    <string name="subtitleBali">“Recommended Places in Bali Based on your interests”</string>
+
 
 </resources>
