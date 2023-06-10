@@ -6,13 +6,15 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.WindowManager
-import com.capstone.baliguide_app.R
+import com.capstone.baliguide_app.databinding.ActivitySplashScreenBinding
 
 @Suppress("DEPRECATION")
 class SplashScreen : AppCompatActivity() {
+    private lateinit var binding: ActivitySplashScreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
+        binding = ActivitySplashScreenBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // This is used to hide the status bar and make
         // the splash screen as a full screen activity.
@@ -30,7 +32,7 @@ class SplashScreen : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, 4000) // 3000 is the delayed time in milliseconds.
+        }, 3000) // 3000 is the delayed time in milliseconds.
 
     }
 }
