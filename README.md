@@ -14,4 +14,19 @@ This is the repository for the android of <i>BaliGuide</i> Project
 3. Wait for the installation.
 
 4. Run the app 😁
+---
+
+## Library That We Use
+```
+Junit
+RetroFit
+Glide
+ViewPager
+Lifecycle-livedata
+Lifecycle-viewmodel
+Espresso
+```
+And basic android library
+
+This application can works on Android SDK 33++ (Android TIRAMISU)
 
