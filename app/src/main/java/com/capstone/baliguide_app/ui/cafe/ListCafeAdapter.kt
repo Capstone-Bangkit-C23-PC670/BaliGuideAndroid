@@ -9,9 +9,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.capstone.baliguide_app.R
+import com.capstone.baliguide_app.data.apiresponse.CafeItem
 import com.capstone.baliguide_app.data.model.WisataDummy
 
-class ListCafeAdapter (private val listCafe: ArrayList<WisataDummy>) : RecyclerView.Adapter<ListCafeAdapter.ListViewHolder>() {
+class ListCafeAdapter (private val listCafe: List<CafeItem>) : RecyclerView.Adapter<ListCafeAdapter.ListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_cafe, parent, false)
@@ -19,17 +20,16 @@ class ListCafeAdapter (private val listCafe: ArrayList<WisataDummy>) : RecyclerV
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, ratings, location, price, photo) = listCafe[position]
         Glide.with(holder.imgPhoto)
-            .load(photo)
+            .load(listCafe[position].imgUrl)
             .into(holder.imgPhoto)
-        holder.tvName.text = name
-        holder.tvRatings.text = ratings
-        holder.tvLocation.text = location
+        holder.tvName.text = listCafe[position].nama
+        holder.tvRatings.text = listCafe[position].rating.toString()
+        holder.tvLocation.text = listCafe[position].location
 
         holder.itemView.setOnClickListener {
             val intentDetail = Intent(holder.itemView.context, DetailCafeActivity::class.java)
-            intentDetail.putExtra(DetailCafeActivity.EXTRA_PLAYER, listCafe[holder.adapterPosition])
+            intentDetail.putExtra(DetailCafeActivity.EXTRA_CAFE, listCafe[holder.adapterPosition])
             holder.itemView.context.startActivity(intentDetail)
         }
     }

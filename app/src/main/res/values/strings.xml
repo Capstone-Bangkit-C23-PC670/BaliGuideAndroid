@@ -49,13 +49,13 @@
     <string name="budget_text">Budget : </string>
     <string name="budget_hint">Your Budget...</string>
     <string name="location_text">Location : </string>
-    <string name="location_hint">Location...</string>
+    <string name="location_hint">Location (Kuta, Buleleng, etc)</string>
     <string name="facilities_text">Facilities : </string>
     <string name="facilities_hint">Facilities...</string>
     <string name="food_type_text">Type of Food : </string>
     <string name="food_type_hint">Halal or Non-Halal...</string>
     <string name="ratings_text">Ratings : </string>
-    <string name="ratings_hint">Ratings...</string>
+    <string name="ratings_hint">Ratings (1-5)</string>
     <string name="open_text">Opening Hours : </string>
     <string name="open_hint">format(HH:MM)</string>
     <string name="close_text">Closing Hours : </string>

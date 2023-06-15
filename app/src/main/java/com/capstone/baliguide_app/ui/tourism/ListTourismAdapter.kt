@@ -9,9 +9,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.capstone.baliguide_app.R
+import com.capstone.baliguide_app.data.apiresponse.TourismItem
 import com.capstone.baliguide_app.data.model.WisataDummy
 
-class ListTourismAdapter (private val listTourism: ArrayList<WisataDummy>) : RecyclerView.Adapter<ListTourismAdapter.ListViewHolder>() {
+class ListTourismAdapter (private val listTourism: List<TourismItem>) : RecyclerView.Adapter<ListTourismAdapter.ListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view: View =
@@ -20,13 +21,12 @@ class ListTourismAdapter (private val listTourism: ArrayList<WisataDummy>) : Rec
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, ratings, location, price, photo) = listTourism[position]
         Glide.with(holder.imgPhoto)
-            .load(photo)
+            .load(listTourism[position].imgURL)
             .into(holder.imgPhoto)
-        holder.tvName.text = name
-        holder.tvRatings.text = ratings
-        holder.tvLocation.text = location
+        holder.tvName.text = listTourism[position].name
+        holder.tvRatings.text = listTourism[position].rating.toString()
+        holder.tvLocation.text = listTourism[position].location
 
         holder.itemView.setOnClickListener {
             val intentDetail = Intent(holder.itemView.context, DetailTourismActivity::class.java)

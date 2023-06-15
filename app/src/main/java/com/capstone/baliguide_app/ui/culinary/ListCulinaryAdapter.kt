@@ -9,9 +9,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.capstone.baliguide_app.R
+import com.capstone.baliguide_app.data.apiresponse.FoodItem
 import com.capstone.baliguide_app.data.model.WisataDummy
 
-class ListCulinaryAdapter (private val listCulinary: ArrayList<WisataDummy>) : RecyclerView.Adapter<ListCulinaryAdapter.ListViewHolder>() {
+class ListCulinaryAdapter (private val listCulinary: List<FoodItem>) : RecyclerView.Adapter<ListCulinaryAdapter.ListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view: View =
@@ -20,13 +21,12 @@ class ListCulinaryAdapter (private val listCulinary: ArrayList<WisataDummy>) : R
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, ratings, location, price, photo) = listCulinary[position]
         Glide.with(holder.imgPhoto)
-            .load(photo)
+            .load(listCulinary[position].imgUrl)
             .into(holder.imgPhoto)
-        holder.tvName.text = name
-        holder.tvRatings.text = ratings
-        holder.tvLocation.text = location
+        holder.tvName.text = listCulinary[position].nama
+        holder.tvRatings.text = listCulinary[position].rating.toString()
+        holder.tvLocation.text = listCulinary[position].lokasi
 
         holder.itemView.setOnClickListener {
             val intentDetail = Intent(holder.itemView.context, DetailCulinaryActivity::class.java)

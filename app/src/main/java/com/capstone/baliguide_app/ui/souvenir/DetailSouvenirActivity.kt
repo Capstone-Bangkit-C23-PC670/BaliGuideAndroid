@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.bumptech.glide.Glide
 import com.capstone.baliguide_app.R
+import com.capstone.baliguide_app.data.apiresponse.SouvenirItem
 import com.capstone.baliguide_app.data.model.WisataDummy
 import com.capstone.baliguide_app.databinding.ActivityDetailSouvenirBinding
 import com.capstone.baliguide_app.ui.homepage.HomepageActivity
@@ -43,7 +44,7 @@ class DetailSouvenirActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val wisata = if (Build.VERSION.SDK_INT >= 33) {
-            intent.getParcelableExtra(EXTRA_PLAYER, WisataDummy::class.java)
+            intent.getParcelableExtra(EXTRA_PLAYER, SouvenirItem::class.java)
         }
 
         else {
@@ -52,14 +53,25 @@ class DetailSouvenirActivity : AppCompatActivity() {
         }
 
         if (wisata != null) {
-            binding.tvPlaceName.text = wisata.name
+            binding.tvPlaceName.text = wisata.nama
             Glide.with(binding.imageView2)
-                .load(wisata.photo)
+                .load(wisata.imgUrl)
                 .into(binding.imageView2)
-            binding.tvPlaceLocation.text = "Location " + wisata.location
-            binding.tvPlaceRating.text = "Ratings : " + wisata.ratings
+            binding.tvPlaceLocation.text = "Location : " + wisata.lokasi
+            binding.tvPlaceRating.text = "Ratings : " + wisata.rating
+            binding.tvPlaceOpened.text = "Open at : " + wisata.opened
+            binding.tvPlaceClosed.text = "Close at : " + wisata.closed
+        }
+
+        else {
+            binding.tvPlaceName.text = "Souvenir Khas Bali"
+            Glide.with(binding.imageView2)
+                .load("https://i.kym-cdn.com/entries/icons/original/000/040/897/cover6.jpg")
+                .into(binding.imageView2)
+            binding.tvPlaceLocation.text = "Location " + "Jalan Kesedihan"
+            binding.tvPlaceRating.text = "Ratings : " + "10/10"
             binding.tvPlaceOpened.text = "Open at : " + "08:00"
-            binding.tvPlaceClosed.text = "Close at : " + "23:59"
+            binding.tvPlaceClosed.text = "Close at : " + "20:00"
         }
 
         binding.goBackButton.setOnClickListener{

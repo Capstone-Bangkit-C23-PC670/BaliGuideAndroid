@@ -5,8 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import androidx.activity.viewModels
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstone.baliguide_app.R
+import com.capstone.baliguide_app.data.apiresponse.FoodItem
 import com.capstone.baliguide_app.data.model.WisataDummy
 import com.capstone.baliguide_app.databinding.ActivityCulinaryResultBinding
 import com.capstone.baliguide_app.ui.homepage.HomepageActivity
@@ -14,6 +18,7 @@ import com.capstone.baliguide_app.ui.homepage.HomepageActivity
 class CulinaryResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCulinaryResultBinding
     private val list = ArrayList<WisataDummy>()
+    private val viewModel: CulinaryViewModel by viewModels()
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater = menuInflater
@@ -40,28 +45,26 @@ class CulinaryResultActivity : AppCompatActivity() {
         binding = ActivityCulinaryResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.listCulinary.setHasFixedSize(true)
-        list.addAll(getListWisataDummy())
-        showRecyclerList()
+        val layoutManager = LinearLayoutManager(this)
+        binding.listCulinary.layoutManager = layoutManager
+        val itemDecoration = DividerItemDecoration(this, layoutManager.orientation)
+        binding.listCulinary.addItemDecoration(itemDecoration)
+
+        viewModel.culinaryResponse.observe(this, { getFoods ->
+            getCulinaryResults(getFoods as List<FoodItem>)
+        })
+
+        viewModel.isLoading.observe(this, {
+            showLoading(it)
+        })
     }
 
-    private fun getListWisataDummy(): ArrayList<WisataDummy> {
-        val dataName = resources.getStringArray(R.array.dummy_data_name)
-        val dataRatings = resources.getStringArray(R.array.dummy_data_ratings)
-        val dataLocations = resources.getStringArray(R.array.dummy_data_location)
-        val dataPrice = resources.getStringArray(R.array.dummy_data_price)
-        val dataPhoto = resources.getStringArray(R.array.dummy_data_photo)
-        val listWisata = ArrayList<WisataDummy>()
-        for (i in dataName.indices) {
-            val player = WisataDummy(dataName[i], dataRatings[i], dataLocations[i], dataPrice[i], dataPhoto[i])
-            listWisata.add(player)
-        }
-        return listWisata
-    }
-
-    private fun showRecyclerList() {
-        binding.listCulinary.layoutManager = LinearLayoutManager(this)
-        val adapter = ListCulinaryAdapter(list)
+    private fun getCulinaryResults(ListCafe: List<FoodItem>) {
+        val adapter = ListCulinaryAdapter(ListCafe)
         binding.listCulinary.adapter = adapter
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 }

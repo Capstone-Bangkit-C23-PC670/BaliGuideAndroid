@@ -9,10 +9,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.capstone.baliguide_app.R
+import com.capstone.baliguide_app.data.apiresponse.SouvenirItem
 import com.capstone.baliguide_app.data.model.WisataDummy
 import com.capstone.baliguide_app.ui.hotel.ListHotelAdapter
 
-class ListSouvenirAdapter (private val listSouvenir: ArrayList<WisataDummy>) : RecyclerView.Adapter<ListSouvenirAdapter.ListViewHolder>() {
+class ListSouvenirAdapter (private val listSouvenir: List<SouvenirItem>) : RecyclerView.Adapter<ListSouvenirAdapter.ListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view: View =
@@ -21,13 +22,12 @@ class ListSouvenirAdapter (private val listSouvenir: ArrayList<WisataDummy>) : R
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, ratings, location, price, photo) = listSouvenir[position]
         Glide.with(holder.imgPhoto)
-            .load(photo)
+            .load(listSouvenir[position].imgUrl)
             .into(holder.imgPhoto)
-        holder.tvName.text = name
-        holder.tvRatings.text = ratings
-        holder.tvLocation.text = location
+        holder.tvName.text = listSouvenir[position].nama
+        holder.tvRatings.text = listSouvenir[position].rating.toString()
+        holder.tvLocation.text = listSouvenir[position].lokasi
 
         holder.itemView.setOnClickListener {
             val intentDetail = Intent(holder.itemView.context, DetailSouvenirActivity::class.java)
