@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -23,6 +24,7 @@ class HomepageActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityHomepageBinding
+    private var interval:Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,10 +49,10 @@ class HomepageActivity : AppCompatActivity() {
 
         binding.appBarHomepage.toolbar.setOnMenuItemClickListener{menuItem ->
             when (menuItem.itemId) {
-                R.id.action_logout -> {
-                    finish()
-                    val moveIntent = Intent(this@HomepageActivity, MainActivity::class.java)
-                    startActivity(moveIntent)
+                R.id.action_setting -> {
+                    val message = resources.getString(R.string.under_construct)
+                    val toast = Toast.makeText(this, message, Toast.LENGTH_SHORT)
+                    toast.show()
                     true
                 }
                 else -> {
@@ -70,5 +72,18 @@ class HomepageActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_homepage)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    override fun onBackPressed() {
+        val message = resources.getString(R.string.press_back)
+        val backToast = Toast.makeText(this, message, Toast.LENGTH_SHORT)
+        if (interval + 2000 > System.currentTimeMillis()) {
+            backToast.cancel()
+            super.onBackPressed()
+            return
+        } else {
+            backToast.show()
+        }
+        interval = System.currentTimeMillis()
     }
 }

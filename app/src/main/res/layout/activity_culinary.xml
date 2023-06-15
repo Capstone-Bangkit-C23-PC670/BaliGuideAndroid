@@ -40,36 +40,6 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <TextView
-            android:id="@+id/textViewname"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/budget_text"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title_feature" />
-
-        <com.capstone.baliguide_app.ui.customview.CustomInputText
-            android:id="@+id/input_budget"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:hint="@string/budget_hint"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewname"/>
-
-        <TextView
             android:id="@+id/textLocation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -83,7 +53,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_budget" />
+            app:layout_constraintTop_toBottomOf="@+id/title_feature" />
 
         <com.capstone.baliguide_app.ui.customview.CustomInputText
             android:id="@+id/input_location"
@@ -106,7 +76,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            android:text="@string/facilities_text"
+            android:text="@string/food_type_text"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -123,7 +93,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:hint="@string/location_hint"
+            android:hint="@string/food_type_hint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -166,10 +136,12 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            android:enabled="false"
+            android:layout_marginBottom="16dp"
+            android:enabled="true"
             android:text="@string/button_guides"
-            android:textSize="24sp"
             android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

@@ -16,6 +16,8 @@ class SplashScreen : AppCompatActivity() {
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Reference https://www.geeksforgeeks.org/splash-screen-in-android/
+
         // This is used to hide the status bar and make
         // the splash screen as a full screen activity.
         window.setFlags(
