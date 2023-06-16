@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Baliguide-app</string>
     <string name="login">Login</string>
+    <string name="back">Back</string>
+    <string name="detail_recommend">Here is the Detail :)</string>
     <string name="password_minimum">Minimum Password is 8 Character!</string>
     <string name="email_validation">Enter a valid email address!</string>
     <string name="hint_email">Insert your e-mail...</string>
@@ -21,9 +23,12 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_subtitle">android@google.com</string>
+    <string name="under_construct">Feature is under construct :)</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <string name="phone_num_text">Phone Number</string>
 
     <string name="menu_home">Homepage</string>
     <string name="menu_logout">Logout</string>
@@ -34,7 +39,90 @@
     <string name="menu_culinary">Culinary</string>
     <string name="menu_tourist">Tourist Spots</string>
 
+    <string name="press_back">Press back again to leave the app.</string>
 
+    <string name="homepage">Go to Homepage</string>
     <string name="menu_menus">Menus</string>
+    <string name="here_our_recom">Here are Our Recommendation!</string>
+
+    <string name="title_feature">Please Select These Options.</string>
+    <string name="budget_text">Budget : </string>
+    <string name="budget_hint">Your Budget...</string>
+    <string name="location_text">Location : </string>
+    <string name="location_hint">Location (Kuta, Buleleng, etc)</string>
+    <string name="facilities_text">Facilities : </string>
+    <string name="facilities_hint">Facilities...</string>
+    <string name="food_type_text">Type of Food : </string>
+    <string name="food_type_hint">Halal or Non-Halal...</string>
+    <string name="ratings_text">Ratings : </string>
+    <string name="ratings_hint">Ratings (1-5)</string>
+    <string name="open_text">Opening Hours : </string>
+    <string name="open_hint">format(HH:MM)</string>
+    <string name="close_text">Closing Hours : </string>
+    <string name="close_hint">format(HH:MM)</string>
+
+    <string name="cafe_act_toolbar_title">Cafes Form</string>
+    <string name="cafe_result_toolbar_title">Cafes Results</string>
+    <string name="cafe_detail_toolbar_title">Cafe Detail</string>
+
+    <string name="hotel_act_toolbar_title">Hotel Form</string>
+    <string name="hotel_result_toolbar_title">Hotel Results</string>
+    <string name="hotel_detail_toolbar_title">Hotel Detail</string>
+
+    <string name="souvenir_act_toolbar_title">Souvenir Form</string>
+    <string name="souvenir_result_toolbar_title">Souvenir Results</string>
+    <string name="souvenir_detail_toolbar_title">Souvenir Detail</string>
+
+    <string name="culinary_act_toolbar_title">Culinary Form</string>
+    <string name="culinary_result_toolbar_title">Culinary Results</string>
+    <string name="culinary_detail_toolbar_title">Culinary Detail</string>
+
+    <string name="tourism_act_toolbar_title">Tourism Form</string>
+    <string name="tourism_result_toolbar_title">Tourism Results</string>
+    <string name="tourism_detail_toolbar_title">Tourism Detail</string>
+
+    <string name="button_guides">Guide Me!</string>
+    <string name="titleBali">BaliGuide</string>
+    <string name="subtitleBali">“Recommended Places in Bali Based on your interests”</string>
+
+    <string-array name="dummy_data_name">
+        <item>Cafe Laute</item>
+        <item>I Made Cafe Real</item>
+        <item>Janji Jiwa Kuta</item>
+        <item>Kopi Kenangan Kuta</item>
+        <item>Starbucks Kuta Timur</item>
+    </string-array>
+
+    <string-array name="dummy_data_ratings">
+        <item>5.0</item>
+        <item>5.0</item>
+        <item>5.0</item>
+        <item>5.0</item>
+        <item>5.0</item>
+    </string-array>
+
+    <string-array name="dummy_data_location">
+        <item>Jalan Siliwangi Tiga Berlian, Blok X no 16</item>
+        <item>Jalan Prabuwijaya 5, Buleleng, Bali</item>
+        <item>Jalan Panglima Polim, Buleleng Bali</item>
+        <item>Jalan Jalan</item>
+        <item>Jalan Jalan</item>
+    </string-array>
+
+    <string-array name="dummy_data_price">
+        <item>Rp50.000</item>
+        <item>Rp50.000</item>
+        <item>Rp50.000</item>
+        <item>Rp50.000</item>
+        <item>Rp50.000</item>
+    </string-array>
+
+    <string-array name="dummy_data_photo">
+        <item>https://elevenmyanmar.com/sites/news-eleven.com/files/news-images/bali_2.jpg</item>
+        <item>https://i.pinimg.com/736x/ea/40/98/ea4098fc61bfe3f0f56b3a4d4f7c40b6--honeymoons-bali.jpg</item>
+        <item>https://www.ministryofvillas.com/wp-content/uploads/2020/12/copenhagencanggu4.jpg</item>
+        <item>https://i.kym-cdn.com/entries/icons/original/000/040/897/cover6.jpg</item>
+        <item>https://i.kym-cdn.com/entries/icons/original/000/040/897/cover6.jpg</item>
+    </string-array>
 
 </resources>
